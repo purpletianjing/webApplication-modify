@@ -3,6 +3,7 @@ describe("FormSerilizer Test",function() {
   var form;
   var correctAnswer = [];
   var scanResult = [];
+  var formSerilizer;
   beforeEach(function() {
     testContainer.innerHTML = "<form>" +
     "<input type='text' name='1-1' value='多态' />" +
@@ -47,14 +48,18 @@ describe("FormSerilizer Test",function() {
       value: ['A','C','D'],
       realValue: ['A','B','D']
     }];
+    formSerilizer = new FormSerilizer();
+    FormSerilizer.getCorrectAnswer(correctAnswer);
+    formSerilizer.formScan(form);
   });
   afterEach(function() {
     testContainer.innerHTML = "";
   });
+
   it("should display result",function() {
-    var formSerilizer = new FormSerilizer();
-    FormSerilizer.getCorrectAnswer(correctAnswer);
-    formSerilizer.formScan(form);
     expect(formSerilizer.result).toEqual(scanResult);
+  });
+  it("get score",function() {
+    expect(formSerilizer.getScore()).toBe(5);
   });
 });

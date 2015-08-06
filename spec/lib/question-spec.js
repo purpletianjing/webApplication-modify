@@ -27,7 +27,7 @@ describe("Question test",function() {
     expect(question.value).toEqual(['A']);
     expect(question.realValue).toEqual(['A']);
   });
-  it("get score",function(){
-    expect(question.getScore()).toBe(5);
-  });
+  // it("get score",function(){
+  //   expect(question.getScore()).toBe(5);
+  // });
 });

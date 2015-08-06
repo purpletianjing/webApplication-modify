@@ -4,7 +4,7 @@ describe("Question test",function() {
     typeStragy = new TypeStragy('radio',['A'],['A']);
   });
 
-  it("get score",function(){
-    expect(typeStragy.typeGetScore()).toBe(5);
-  });
+  // it("get score",function(){
+  //   expect(typeStragy.typeGetScore()).toBe(5);
+  // });
 });
