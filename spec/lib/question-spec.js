@@ -3,7 +3,7 @@ describe("Question test",function() {
   var serilizeResult = [];
   var question;
   beforeEach(function() {
-    question = new Question('2-1','radio',['A'],['A']);
+    question = new Question('radio',['A'],['A']);
     serilizeResult = [{
       type:'text',
       name: '1-1',
@@ -23,7 +23,6 @@ describe("Question test",function() {
   });
 
   it("check his name,type and value",function() {
-    expect(question.name).toBe('2-1');
     expect(question.type).toBe('radio');
     expect(question.value).toEqual(['A']);
     expect(question.realValue).toEqual(['A']);
