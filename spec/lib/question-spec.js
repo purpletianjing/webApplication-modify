@@ -1,7 +1,9 @@
 describe("Question test",function() {
   var answer;
   var serilizeResult = [];
+  var question;
   beforeEach(function() {
+    question = new Question('2-1','radio',['A'],['A']);
     serilizeResult = [{
       type:'text',
       name: '1-1',
@@ -19,16 +21,14 @@ describe("Question test",function() {
       realValue: ['A','B','D']
     }];
   });
-  val.name,val.type,val.value,val.realValue
+
   it("check his name,type and value",function() {
-    var question = new Question('2-1','radio',['A'],['A']);
     expect(question.name).toBe('2-1');
     expect(question.type).toBe('radio');
     expect(question.value).toEqual(['A']);
     expect(question.realValue).toEqual(['A']);
   });
   it("get score",function(){
-    MutilFill.getCorrectAnswer(answer);
-    expect(mutilFill.getScore()).toBe(1);
+    expect(question.getScore()).toBe(5);
   });
 });
