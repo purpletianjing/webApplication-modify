@@ -5,6 +5,6 @@ describe("Question test",function() {
   });
 
   // it("get score",function(){
-  //   expect(typeStragy.typeGetScore()).toBe(5);
+  //   expect(typeStragy.typeGetScore()).toBe(2);
   // });
 });
